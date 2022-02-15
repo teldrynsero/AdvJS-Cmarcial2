@@ -1,0 +1,22 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "for game",
+  "main": "async-input.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "AdvJs-Cmarcial2"
+  },
+  "author": "Christina Marcial",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "each-async": "^2.0.0",
+    "indent-string": "^5.0.0",
+    "readline-sync": "^1.4.10"
+  }
+}
