@@ -6,8 +6,7 @@ import chalk from 'chalk';
 
 import fs from 'fs';
 
-//const log = console.log;
-
+// variables to track total wins, loses, and ties
 var player1Wins = 0;
 var player1Loses = 0;
 
@@ -32,17 +31,18 @@ export class TicTacToe
             input: process.stdin,
             output: process.stdout
         })
-
     }
 
     /// display tic tac toe board layout
-    gameBoard(){
-    this.ticTacToeBoard = `${this.make(this.ticTacToe[0])} | ${this.make(this.ticTacToe[1])} | ${this.make(this.ticTacToe[2])}
+    gameBoard()
+    {
+        this.ticTacToeBoard =
+        `${this.make(this.ticTacToe[0])} | ${this.make(this.ticTacToe[1])} | ${this.make(this.ticTacToe[2])}
 ---------
 ${this.make(this.ticTacToe[3])} | ${this.make(this.ticTacToe[4])} | ${this.make(this.ticTacToe[5])}
 ---------
 ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(this.ticTacToe[8])}`;
-}
+    }
 
     // START THE GAME
     gameStart()
@@ -56,15 +56,19 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
         })
     }
 
-    endGame()
+    // when game ENDS
+    gameEnd()
     {
-        this.rl.close();
-        this.gameEnded = true;
+        //this.rl.close();
+        this.gameEnded = true; // game has ended
         //console.log("MOVE HISTORY: ")
-        //console.log(this.moveHistory) displays move history for debugging
+        //console.log(this.moveHistory) displays move history if needed
+
         console.log(chalk.blue(`Would you like to tic tac toe again? (2 players)`))
 
         let answer = input.question("Y or N: ");
+
+        this.rl.close();
 
         if (answer == "Y" || answer == "y") // let's play again
         {
@@ -89,7 +93,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
 
             fs.appendFileSync('./input.json', bothTies);
 
-            var data = fs.readFileSync('input.json');
+            var data = fs.readFileSync('./input.json');
             console.log(data.toString());
 
             // Exit
@@ -128,6 +132,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
             // check if there are 3 symbols in a row (vertical, horizontal, or diagonal)
             // check to see if the 3 symbols are all the same, and thus a win for a player
             var checkSet = new Set()
+            
             // VERTICAL wins
             if (this.ticTacToe[0] && this.ticTacToe[3] && this.ticTacToe[6] &&
                 (Array.from(checkSet.add(this.ticTacToe[0]).add(this.ticTacToe[3]).add(this.ticTacToe[6])).length === 1))
@@ -143,7 +148,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                     player1Loses = player1Loses + 1;
                     player2Wins = player2Wins + 1;
                 }
-                this.endGame();
+                this.gameEnd();
             }
             checkSet.clear();
             if (this.ticTacToe[1] && this.ticTacToe[4] && this.ticTacToe[7] &&
@@ -160,7 +165,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                     player1Loses = player1Loses + 1;
                     player2Wins = player2Wins + 1;
                 }
-                this.endGame();
+                this.gameEnd();
             }
             checkSet.clear();
             if (this.ticTacToe[2] && this.ticTacToe[5] && this.ticTacToe[8] &&
@@ -177,7 +182,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                     player1Loses = player1Loses + 1;
                     player2Wins = player2Wins + 1;
                 }
-                this.endGame();
+                this.gameEnd();
             }
             checkSet.clear();
             // HORIZONTAL wins
@@ -195,7 +200,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                     player1Loses = player1Loses + 1;
                     player2Wins = player2Wins + 1;
                 }
-                this.endGame();
+                this.gameEnd();
             }
             checkSet.clear();
             if (this.ticTacToe[3] && this.ticTacToe[4] && this.ticTacToe[5] &&
@@ -212,7 +217,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                     player1Loses = player1Loses + 1;
                     player2Wins = player2Wins + 1;
                 }
-                this.endGame();
+                this.gameEnd();
             }
             checkSet.clear();
             if (this.ticTacToe[6] && this.ticTacToe[7] && this.ticTacToe[8] &&
@@ -229,7 +234,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                     player1Loses = player1Loses + 1;
                     player2Wins = player2Wins + 1;
                 }
-                this.endGame();
+                this.gameEnd();
             }
             checkSet.clear();
             // DIAGNOL wins
@@ -247,7 +252,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                     player1Loses = player1Loses + 1;
                     player2Wins = player2Wins + 1;
                 }
-                this.endGame();
+                this.gameEnd();
             }
             // TIE or NO wins
             else if (this.moveHistory.length == 9) // board is filled up, but no wins
@@ -256,7 +261,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
 
                 ties = ties + 1;
 
-                this.endGame();
+                this.gameEnd();
             }
             checkSet.clear();
         }
@@ -320,7 +325,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
         {
             // wrong position
             console.log(chalk.red("Not a valid position; error occured"));
-            this.endGame(); // how to handle this... let's just start over
+            this.gameEnd(); // how to handle this... let's just start over
         }
 
         // is position is occupied and thus not valid?

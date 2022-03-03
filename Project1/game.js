@@ -1,16 +1,13 @@
 //import readlineSync from 'readline-sync';
-
-import chalk from 'chalk';
-
-//const log = console.log;
-
-import {TicTacToe} from './functions.js'
-
 //import readline from 'readline';
 
-import input from 'readline-sync';
+import chalk from 'chalk'; // colors text
 
-import fs from 'fs';
+import {TicTacToe} from './functions.js' // functions to make game work and play
+
+import input from 'readline-sync'; // let user input
+
+import fs from 'fs'; // allows writing to/from files
 
 //START PROGRAM
 console.log(chalk.blue(`Would you like to play tic tac toe? (2 players)`))
