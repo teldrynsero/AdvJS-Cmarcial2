@@ -22,3 +22,14 @@
 | Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/project0 |
 | Self Grade | |
 | Notes | |
+
+### Project 1
+
+| Name | Value |
+| --- | --- |
+| Description | Game Project |
+| Due Date | 8-Mar-22 |
+| Status | |
+| Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Project1 |
+| Self Grade | |
+| Notes | Tic Tac Toe |
