@@ -61,8 +61,8 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
     {
         //this.rl.close();
         this.gameEnded = true; // game has ended
-        //console.log("MOVE HISTORY: ")
-        //console.log(this.moveHistory) displays move history if needed
+        console.log("MOVE HISTORY: ")
+        console.log(this.moveHistory) // displays move history if needed
 
         console.log(chalk.blue(`Would you like to tic tac toe again? (2 players)`))
 
@@ -73,7 +73,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
         if (answer == "Y" || answer == "y") // let's play again
         {
             var game = new TicTacToe();
-            console.log(chalk.blue('Player 2, go first:'))
+            console.log(chalk.blue('Player 2, go first (choose position 1-9):'))
             game.gameStart();
         }
         else if (answer == "N" || answer == "n") // don't play again
@@ -120,7 +120,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 this.currentPlayer = !this.currentPlayer
             }
 
-            console.log(chalk.blue(`Player ${this.showPlayer(this.currentPlayer)}'s turn (position[1-9]): `))
+            console.log(chalk.blue(`Player ${this.showPlayer(this.currentPlayer)}'s turn (choose position 1-9): `))
         }
     }
 
@@ -239,7 +239,9 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
             checkSet.clear();
             // DIAGNOL wins
             if ((this.ticTacToe[0] && this.ticTacToe[4] && this.ticTacToe[8] &&
-                (Array.from(checkSet.add(this.ticTacToe[0]).add(this.ticTacToe[4]).add(this.ticTacToe[8])).length === 1)) || (this.ticTacToe[2] && this.ticTacToe[4] && this.ticTacToe[6] && (Array.from(checkSet.add(this.ticTacToe[2]).add(this.ticTacToe[4]).add(this.ticTacToe[6])).length === 1)))
+                (Array.from(checkSet.add(this.ticTacToe[0]).add(this.ticTacToe[4]).add(this.ticTacToe[8])).length === 1)) ||
+                (this.ticTacToe[2] && this.ticTacToe[4] && this.ticTacToe[6] &&
+                (Array.from(checkSet.add(this.ticTacToe[2]).add(this.ticTacToe[4]).add(this.ticTacToe[6])).length === 1)))
             {
                 console.log(chalk.yellow(`Player ${this.getPlayerFromChar(this.ticTacToe[4])} WINS`));
                 if (this.currentPlayer == true)

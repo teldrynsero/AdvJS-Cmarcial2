@@ -34,7 +34,7 @@ if (answer == "Y" || answer == "y") // let's play
 
     // GAME START
     var game = new TicTacToe();
-    console.log(chalk.blue("Player 2, " + player2Name + ", go first:"));
+    console.log(chalk.blue("Player 2, " + player2Name + ", go first (choose position 1-9):"));
     game.gameStart();
 }
 else if (answer == "N" || answer == "n") // don't play
