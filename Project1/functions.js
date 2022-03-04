@@ -24,7 +24,7 @@ export class TicTacToe
         this.ticTacToeBoard = ''; // the board
         this.currentPlayer = false; // player 2 = false (O), player 1 = true (X)
         this.gameEnded = false; // game is not over unless otherwise stated
-        this.moveHistory = []; // move history log for debugging + recording total moves
+        this.moveLog = []; // move history log for debugging + recording total moves
     
         this.rl = readline.createInterface
         ({
@@ -33,7 +33,7 @@ export class TicTacToe
         })
     }
 
-    /// display tic tac toe board layout
+    // display tic tac toe board layout
     gameBoard()
     {
         this.ticTacToeBoard =
@@ -61,8 +61,8 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
     {
         //this.rl.close();
         this.gameEnded = true; // game has ended
-        console.log("MOVE HISTORY: ")
-        console.log(this.moveHistory) // displays move history if needed
+        //console.log("MOVE HISTORY: ")
+        //console.log(this.moveLog) // displays move history if needed
 
         console.log(chalk.blue(`Would you like to tic tac toe again? (2 players)`))
 
@@ -127,15 +127,15 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
     processGame()
     {
         // once at least 5 moves have been made (minimum for a win to be made)
-        if(this.moveHistory.length >= 5)
+        if(this.moveLog.length >= 5)
         {
             // check if there are 3 symbols in a row (vertical, horizontal, or diagonal)
             // check to see if the 3 symbols are all the same, and thus a win for a player
-            var checkSet = new Set()
+            var setCheck = new Set()
             
             // VERTICAL wins
             if (this.ticTacToe[0] && this.ticTacToe[3] && this.ticTacToe[6] &&
-                (Array.from(checkSet.add(this.ticTacToe[0]).add(this.ticTacToe[3]).add(this.ticTacToe[6])).length === 1))
+                (Array.from(setCheck.add(this.ticTacToe[0]).add(this.ticTacToe[3]).add(this.ticTacToe[6])).length === 1))
             {
                 console.log(chalk.yellow(`Player ${this.getPlayerFromChar(this.ticTacToe[0])} WINS`));
                 if (this.currentPlayer == true) // player 1 WON
@@ -150,9 +150,9 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 }
                 this.gameEnd();
             }
-            checkSet.clear();
+            setCheck.clear();
             if (this.ticTacToe[1] && this.ticTacToe[4] && this.ticTacToe[7] &&
-                (Array.from(checkSet.add(this.ticTacToe[1]).add(this.ticTacToe[4]).add(this.ticTacToe[7])).length === 1))
+                (Array.from(setCheck.add(this.ticTacToe[1]).add(this.ticTacToe[4]).add(this.ticTacToe[7])).length === 1))
             {
                 console.log(chalk.yellow(`Player ${this.getPlayerFromChar(this.ticTacToe[1])} WINS`));
                 if (this.currentPlayer == true)
@@ -167,9 +167,9 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 }
                 this.gameEnd();
             }
-            checkSet.clear();
+            setCheck.clear();
             if (this.ticTacToe[2] && this.ticTacToe[5] && this.ticTacToe[8] &&
-                (Array.from(checkSet.add(this.ticTacToe[2]).add(this.ticTacToe[5]).add(this.ticTacToe[8])).length === 1))
+                (Array.from(setCheck.add(this.ticTacToe[2]).add(this.ticTacToe[5]).add(this.ticTacToe[8])).length === 1))
             {
                 console.log(chalk.yellow(`Player ${this.getPlayerFromChar(this.ticTacToe[2])} WINS`));
                 if (this.currentPlayer == true)
@@ -184,10 +184,10 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 }
                 this.gameEnd();
             }
-            checkSet.clear();
+            setCheck.clear();
             // HORIZONTAL wins
             if (this.ticTacToe[0] && this.ticTacToe[1] && this.ticTacToe[2] &&
-                (Array.from(checkSet.add(this.ticTacToe[0]).add(this.ticTacToe[1]).add(this.ticTacToe[2])).length === 1))
+                (Array.from(setCheck.add(this.ticTacToe[0]).add(this.ticTacToe[1]).add(this.ticTacToe[2])).length === 1))
             {
                 console.log(chalk.yellow(`Player ${this.getPlayerFromChar(this.ticTacToe[0])} WINS`));
                 if (this.currentPlayer == true)
@@ -202,9 +202,9 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 }
                 this.gameEnd();
             }
-            checkSet.clear();
+            setCheck.clear();
             if (this.ticTacToe[3] && this.ticTacToe[4] && this.ticTacToe[5] &&
-                (Array.from(checkSet.add(this.ticTacToe[3]).add(this.ticTacToe[4]).add(this.ticTacToe[5])).length === 1))
+                (Array.from(setCheck.add(this.ticTacToe[3]).add(this.ticTacToe[4]).add(this.ticTacToe[5])).length === 1))
             {
                 console.log(chalk.yellow(`Player ${this.getPlayerFromChar(this.ticTacToe[3])} WINS`));
                 if (this.currentPlayer == true)
@@ -219,9 +219,9 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 }
                 this.gameEnd();
             }
-            checkSet.clear();
+            setCheck.clear();
             if (this.ticTacToe[6] && this.ticTacToe[7] && this.ticTacToe[8] &&
-                (Array.from(checkSet.add(this.ticTacToe[6]).add(this.ticTacToe[7]).add(this.ticTacToe[8])).length === 1))
+                (Array.from(setCheck.add(this.ticTacToe[6]).add(this.ticTacToe[7]).add(this.ticTacToe[8])).length === 1))
             {
                 console.log(chalk.yellow(`Player ${this.getPlayerFromChar(this.ticTacToe[6])} WINS`));
                 if (this.currentPlayer == true)
@@ -236,12 +236,12 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 }
                 this.gameEnd();
             }
-            checkSet.clear();
+            setCheck.clear();
             // DIAGNOL wins
             if ((this.ticTacToe[0] && this.ticTacToe[4] && this.ticTacToe[8] &&
-                (Array.from(checkSet.add(this.ticTacToe[0]).add(this.ticTacToe[4]).add(this.ticTacToe[8])).length === 1)) ||
+                (Array.from(setCheck.add(this.ticTacToe[0]).add(this.ticTacToe[4]).add(this.ticTacToe[8])).length === 1)) ||
                 (this.ticTacToe[2] && this.ticTacToe[4] && this.ticTacToe[6] &&
-                (Array.from(checkSet.add(this.ticTacToe[2]).add(this.ticTacToe[4]).add(this.ticTacToe[6])).length === 1)))
+                (Array.from(setCheck.add(this.ticTacToe[2]).add(this.ticTacToe[4]).add(this.ticTacToe[6])).length === 1)))
             {
                 console.log(chalk.yellow(`Player ${this.getPlayerFromChar(this.ticTacToe[4])} WINS`));
                 if (this.currentPlayer == true)
@@ -257,7 +257,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 this.gameEnd();
             }
             // TIE or NO wins
-            else if (this.moveHistory.length == 9) // board is filled up, but no wins
+            else if (this.moveLog.length === 9) // board is filled up, but no wins
             {
                 console.log(chalk.green('TIE; NO WINNER'));
 
@@ -265,7 +265,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
 
                 this.gameEnd();
             }
-            checkSet.clear();
+            setCheck.clear();
         }
     }
 
@@ -299,7 +299,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
         return this.showPlayer(char === 'X')
     }
 
-    getCharacter(player) // which character to display based on which player's turn it is
+    getChar(player) // which character to display based on which player's turn it is
     {
         if (player == true) // player 1
         {
@@ -340,7 +340,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
         else
         {
             // GET move
-            self.ticTacToe[(position - 1)] = self.getCharacter(self.currentPlayer);
+            self.ticTacToe[(position - 1)] = self.getChar(self.currentPlayer);
 
             // RECORD move
             self.recordMove((position - 1), self.currentPlayer);
@@ -352,10 +352,10 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
 
     recordMove(position, player)
     {
-        this.moveHistory.push // adds to move history log
+        this.moveLog.push // adds to move history log
         ({
             position: position,
-            char: this.getCharacter(this.currentPlayer),
+            char: this.getChar(this.currentPlayer),
             player: this.showPlayer(this.currentPlayer)
         });
     }
