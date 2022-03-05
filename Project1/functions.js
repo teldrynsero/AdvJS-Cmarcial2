@@ -104,10 +104,10 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
         return false; 
     }
 
-    continuePlay()
+    continue()
     {
         this.showBoard();
-        this.processGame();
+        this.gameProcess();
         if(!this.gameEnded) // continue game if there has not been win or tie
         {
             // switch between players
@@ -124,7 +124,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
         }
     }
 
-    processGame()
+    gameProcess()
     {
         // once at least 5 moves have been made (minimum for a win to be made)
         if(this.moveLog.length >= 5)
@@ -185,6 +185,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 this.gameEnd();
             }
             setCheck.clear();
+            
             // HORIZONTAL wins
             if (this.ticTacToe[0] && this.ticTacToe[1] && this.ticTacToe[2] &&
                 (Array.from(setCheck.add(this.ticTacToe[0]).add(this.ticTacToe[1]).add(this.ticTacToe[2])).length === 1))
@@ -237,7 +238,8 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
                 this.gameEnd();
             }
             setCheck.clear();
-            // DIAGNOL wins
+
+            // DIAGNONAL wins
             if ((this.ticTacToe[0] && this.ticTacToe[4] && this.ticTacToe[8] &&
                 (Array.from(setCheck.add(this.ticTacToe[0]).add(this.ticTacToe[4]).add(this.ticTacToe[8])).length === 1)) ||
                 (this.ticTacToe[2] && this.ticTacToe[4] && this.ticTacToe[6] &&
@@ -346,7 +348,7 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
             self.recordMove((position - 1), self.currentPlayer);
 
             // CONTINUE the game
-            self.continuePlay();
+            self.continue();
         }
     }
 
@@ -359,11 +361,4 @@ ${this.make(this.ticTacToe[6])} | ${this.make(this.ticTacToe[7])} | ${this.make(
             player: this.showPlayer(this.currentPlayer)
         });
     }
-
-    processInput(moveContents)
-    {
-        var mc = new Set(moveContents);
-        this.recordMove(mc[0], mc[1], currentPlayer);
-    }
-
 }
