@@ -29,7 +29,7 @@
 | --- | --- |
 | Description | Game Project |
 | Due Date | 8-Mar-22 |
-| Status | |
+| Status | Done |
 | Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Project1 |
 | Self Grade | |
-| Notes | Tic Tac Toe |
+| Notes | Tic Tac Toe Game |
