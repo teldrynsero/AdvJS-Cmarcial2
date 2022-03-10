@@ -1,0 +1,19 @@
+{
+  "name": "faktor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "faktor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teldrynsero/AdvJs-cmarcial2.git"
+  },
+  "author": "Christina Marcial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teldrynsero/AdvJs-cmarcial2/issues"
+  },
+  "homepage": "https://github.com/teldrynsero/AdvJs-cmarcial2#readme"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "cold-puter-science",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cold.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teldrynsero/AdvJs-cmarcial2.git"
+  },
+  "author": "Christina Marcial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teldrynsero/AdvJs-cmarcial2/issues"
+  },
+  "homepage": "https://github.com/teldrynsero/AdvJs-cmarcial2#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
