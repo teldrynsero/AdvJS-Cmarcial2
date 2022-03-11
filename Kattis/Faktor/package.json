@@ -4,7 +4,8 @@
   "description": "",
   "main": "faktor.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "kattis_test": "type 1.in | node faktor.js > out1.txt && FC out1.txt 1.ans && type 2.in | node faktor.js > out2.txt && FC out2.txt 2.ans && type 3.in | node faktor.js > out3.txt && FC out3.txt 3.ans && echo \"All Kattis sample test cases passed!\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/teldrynsero/AdvJs-cmarcial2/issues"
   },
-  "homepage": "https://github.com/teldrynsero/AdvJs-cmarcial2#readme"
+  "homepage": "https://github.com/teldrynsero/AdvJs-cmarcial2#readme",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
 }
