@@ -33,3 +33,14 @@
 | Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Project1 |
 | Self Grade | |
 | Notes | Tic Tac Toe Game |
+
+### Project 2
+
+| Name | Value |
+| --- | --- |
+| Description | Kattis Project |
+| Due Date | 31-Mar-22 |
+| Status |  |
+| Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis |
+| Self Grade | |
+| Notes | |
