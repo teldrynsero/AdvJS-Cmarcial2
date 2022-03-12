@@ -10,5 +10,5 @@
 | Due Date | 31-Mar-22 |
 | Status | Done |
 | Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis/Faktor |
-| Self Grade | |
+| Difficulty | 1.2 |
 | Notes | Kattis link: https://open.kattis.com/problems/faktor |
