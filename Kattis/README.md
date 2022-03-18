@@ -34,3 +34,14 @@
 | Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis/Greater |
 | Difficulty | 1.3 |
 | Notes | Kattis link: https://open.kattis.com/problems/whichisgreater |
+
+### Finding An A
+
+| Name | Value |
+| --- | --- |
+| Description | Kattis's Finding An A |
+| Due Date | 31-Mar-22 |
+| Status | Done |
+| Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis/Finding |
+| Difficulty | 1.2 |
+| Notes | Kattis link: https://open.kattis.com/problems/findingana |
