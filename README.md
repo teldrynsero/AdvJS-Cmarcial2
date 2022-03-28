@@ -40,7 +40,7 @@
 | --- | --- |
 | Description | Kattis Project |
 | Due Date | 31-Mar-22 |
-| Status |  |
+| Status | Done |
 | Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis |
 | Self Grade | 100 (two 1.2 = 30%, two 1.3 = 40%, tests = 30%, submisssions = 5%) |
 | Notes | |
