@@ -11,7 +11,7 @@
 | Status | Done |
 | Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis/Simon |
 | Difficulty | 1.5 |
-| Notes | Kattis link: https://open.kattis.com/problems/Simonsays |
+| Notes | Kattis link: https://open.kattis.com/problems/simonsays |
 
 ### Tetration
 
