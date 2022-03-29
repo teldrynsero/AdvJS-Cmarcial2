@@ -2,6 +2,17 @@
 
 ## Kattis Projects
 
+### Simon Says
+
+| Name | Value |
+| --- | --- |
+| Description | Kattis's Simon Says Problem |
+| Due Date | 31-Mar-22 |
+| Status | Done |
+| Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis/Simon |
+| Difficulty | 1.5 |
+| Notes | Kattis link: https://open.kattis.com/problems/Simonsays |
+
 ### Tetration
 
 | Name | Value |
