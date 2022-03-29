@@ -2,6 +2,17 @@
 
 ## Kattis Projects
 
+### Tetration
+
+| Name | Value |
+| --- | --- |
+| Description | Kattis's Tetration Problem |
+| Due Date | 31-Mar-22 |
+| Status | Done |
+| Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis/Tetration |
+| Difficulty | 1.5 |
+| Notes | Kattis link: https://open.kattis.com/problems/Tetration |
+
 ### Faktor
 
 | Name | Value |

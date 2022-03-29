@@ -1,0 +1,23 @@
+{
+  "name": "simon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simon.js",
+  "scripts": {
+    "test": "jest",
+    "kattis_test": "type 1.in | node simon.js > out1.txt && FC out1.txt 1.ans && type 2.in | node simon.js > out2.txt && FC out2.txt 2.ans && type 3.in | node simon.js > out3.txt && FC out3.txt 3.ans && echo \"All Kattis sample test cases passed!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teldrynsero/AdvJscmarcial2.git"
+  },
+  "author": "Christina Marcial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teldrynsero/AdvJscmarcial2/issues"
+  },
+  "homepage": "https://github.com/teldrynsero/AdvJscmarcial2#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}

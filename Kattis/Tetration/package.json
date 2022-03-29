@@ -1,0 +1,23 @@
+{
+  "name": "tetration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tetration.js",
+  "scripts": {
+    "test": "jest",
+    "kattis_test": "type 1.in | node tetration.js > out1.txt && FC out1.txt 1.ans && type 2.in | node tetration.js > out2.txt && FC out2.txt 2.ans && type 3.in | node tetration.js > out3.txt && FC out3.txt 3.ans && echo \"All Kattis sample test cases passed!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teldrynsero/AdvJsCmarcial2.git"
+  },
+  "author": "Christina Marcial",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teldrynsero/AdvJsCmarcial2/issues"
+  },
+  "homepage": "https://github.com/teldrynsero/AdvJsCmarcial2#readme",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}
