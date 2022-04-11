@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Ranchers' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="TTT.css">
+        <script type="text/javascript" src="TTT.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>TIC-TAC-TOE</h1>
+          </header>
+        <section>
+          <nav>
+              <ol id="intro">
+                  <li>Player 1 (O) goes first</li>
+                  <li>Player 2 (X) goes second</li>
+                  <li>Current player's turn is displayed below</li>
+                  <li>Click the boxes to make your move</li>
+                  <li>Winner is displayed in the bottom box</li>
+                  <li>Click "Start Over" to start a new game</li>
+                  <li>Have fun!</li>
+              </ol>
+              <p><p id="turn"></p></p>
+              <script>
+                document.getElementById("turn").innerHTML = "Player 1's turn";
+              </script>
+          </nav>
+          
+          <main>
+                <input id="s1" onclick= "move1(); win();" readonly>
+           
+                <input id="s2" onclick= "move2(); win();" readonly>
+           
+                <input id="s3" onclick= "move3(); win();" readonly>
+                <br>
+           
+                <input id="s4" onclick= "move4(); win();" readonly>
+                       
+                <input id="s5" onclick= "move5(); win();" readonly>
+           
+                <input id="s6" onclick= "move6(); win();" readonly>
+                <br>
+           
+                <input id="s7" onclick= "move7(); win();" readonly>
+           
+                <input id="s8" onclick= "move8(); win();" readonly>
+           
+                <input id="s9" onclick= "move9(); win();" readonly>
+                <br><br>
+        
+                <button type="button" onclick="reset();">Start Over</button>
+          </main>
+        </section>
+        
+        <footer>
+          <p><p id="result"></p></p>
+        </footer>
+    </body>
+</html>
