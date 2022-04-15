@@ -44,3 +44,14 @@
 | Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Kattis |
 | Self Grade | 95% (two 1.5 problems = 60%, tests = 30%, submisssions = 5%) |
 | Notes | |
+
+### Project 3
+
+| Name | Value |
+| --- | --- |
+| Description | Client-side JS Project |
+| Due Date | 19-Apr-22 |
+| Status | Done |
+| Location | https://github.com/teldrynsero/AdvJS-Cmarcial2/tree/main/Project3 |
+| Self Grade | |
+| Notes | Tic Tac Toe game based from my Project 1 |
