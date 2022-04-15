@@ -6,6 +6,7 @@ How to install, run, and play
 
 INSTALL:
 - Download entire Project3 folder
+- Unzip the .zip file
 
 RUN:
 - Open "TTT.html" in Chrome/your choice of browser

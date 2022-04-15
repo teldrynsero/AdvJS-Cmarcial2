@@ -1,5 +1,6 @@
 function reset() // When Start Over button pressed, reset game
 {
+    // Make all board squares blank again
     document.getElementById("s1").value = "";
     document.getElementById("s2").value = "";
     document.getElementById("s3").value = "";
@@ -10,14 +11,17 @@ function reset() // When Start Over button pressed, reset game
     document.getElementById("s8").value = "";
     document.getElementById("s9").value = "";
 
+    // Clear winner display
     document.getElementById("result").innerHTML = "";
     
+    // Go back to first player's turn
     currentPlayer = 1;
     document.getElementById("turn").innerHTML = "Player 1's turn";
 }
 
 function win() // Has there been a win yet?
 {
+    // Read values currently on the board
     var s1 = document.getElementById("s1").value
     var s2 = document.getElementById("s2").value
     var s3 = document.getElementById("s3").value
@@ -111,6 +115,7 @@ function win() // Has there been a win yet?
 currentPlayer = 1; // player 1 = 1, player 2 = 2
 
 // Move functions take user input and put the appropriate symbol in the selected square
+// After that, the current turn is transferred to the other player
 
 function move1()
 {
@@ -120,7 +125,7 @@ function move1()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s1").value = "X";
         currentPlayer = 1;
@@ -136,7 +141,7 @@ function move2()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s2").value = "X";
         currentPlayer = 1;
@@ -152,7 +157,7 @@ function move3()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s3").value = "X";
         currentPlayer = 1;
@@ -168,7 +173,7 @@ function move4()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s4").value = "X";
         currentPlayer = 1;
@@ -184,7 +189,7 @@ function move5()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s5").value = "X";
         currentPlayer = 1;
@@ -200,7 +205,7 @@ function move6()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s6").value = "X";
         currentPlayer = 1;
@@ -216,7 +221,7 @@ function move7()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s7").value = "X";
         currentPlayer = 1;
@@ -232,7 +237,7 @@ function move8()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s8").value = "X";
         currentPlayer = 1;
@@ -248,7 +253,7 @@ function move9()
         currentPlayer = 2;
         document.getElementById("turn").innerHTML = "Player 2's turn";
     }
-    else if (currentPlayer == 2) // player 1's turn
+    else if (currentPlayer == 2) // player 2's turn
     {
         document.getElementById("s9").value = "X";
         currentPlayer = 1;
